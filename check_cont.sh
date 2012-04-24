@@ -21,8 +21,9 @@ echo ""
 echo $fcID
 echo $project_id
 echo ""
-mkdir temp
 
+if [ -f /bubo/proj/a2010002/nobackup/illumina/${fcID}/fastq_screen/*.txt ]; then
+mkdir temp
 cd /bubo/proj/a2010002/nobackup/illumina/
 grep Human ${fcID}/fastq_screen/*.txt > $dir/temp/Human.txt
 grep Mouse ${fcID}/fastq_screen/*.txt > $dir/temp/Mouse.txt
@@ -57,3 +58,8 @@ else
 fi
 echo ""
 rm -r temp
+
+else 
+echo "ERROR: Could not find file /bubo/proj/a2010002/nobackup/illumina/${fcID}/fastq_screen/*.txt"
+
+fi
