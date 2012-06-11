@@ -10,7 +10,6 @@ else
 
 uppnex_id=$1
 project_id=$2
-
 deliv_path=/proj/$uppnex_id/INBOX/$project_id
 sample_list=`for dir in tophat_out_*; do echo ${dir##*out_};done|sort -n`
 

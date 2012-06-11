@@ -18,11 +18,8 @@ project_id=$2
 
 dir=`pwd`
 echo ""
-echo $fcID
-echo $project_id
-echo ""
-
-if [ -f /bubo/proj/a2010002/nobackup/illumina/${fcID}/fastq_screen/*.txt ]; then
+nr=`ls /bubo/proj/a2010002/nobackup/illumina/${fcID}/fastq_screen/*.txt|wc -l` 
+if [ $nr -gt 15 ]; then
 mkdir temp
 cd /bubo/proj/a2010002/nobackup/illumina/
 grep Human ${fcID}/fastq_screen/*.txt > $dir/temp/Human.txt
@@ -60,6 +57,6 @@ echo ""
 rm -r temp
 
 else 
-echo "ERROR: Could not find file /bubo/proj/a2010002/nobackup/illumina/${fcID}/fastq_screen/*.txt"
+echo "ERROR: Could not find files for all 8 lanes in /bubo/proj/a2010002/nobackup/illumina/${fcID}/fastq_screen/"
 
 fi
