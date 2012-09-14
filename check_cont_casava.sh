@@ -7,7 +7,7 @@ if [ $# -ne 2 ]; then
 
         Arguments:
         <flowcell id>
-                - eg: 120127_SN1018_0062_BD0H2HACXX
+                - eg: 120127_BD0H2HACXX
         <project id>
                 - eg: M.Muurinen_11_01a"
   exit
