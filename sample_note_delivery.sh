@@ -2,7 +2,7 @@
 
 if [ $# -ne 4 ]; then
   echo "Usage:
-        check_cont.sh <flowcell id> <project id> <upnex id> <dryrun y/n>
+        sample_note_delivery.sh <flowcell id> <project id> <upnex id> <dryrun y/n>
 
         Arguments:
         <flowcell id>

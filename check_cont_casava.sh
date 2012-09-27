@@ -1,9 +1,10 @@
-
 #!/bin/bash
-
+# Wraper for checking fastq_screen results for a specific project and flowdell
+# Assumes casava structure
+ 
 if [ $# -ne 2 ]; then
   echo "Usage:
-        check_cont.sh <flowcell id> <project id>
+        check_cont_casava.sh <flowcell id> <project id>
 
         Arguments:
         <flowcell id>

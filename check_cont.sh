@@ -1,5 +1,6 @@
-
 #!/bin/bash
+# Wraper for checking fastq_screen results for a specific project and flowdell
+# Assumes pre casava structure
 
 if [ $# -ne 2 ]; then
   echo "Usage:

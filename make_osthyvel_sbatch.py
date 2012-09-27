@@ -1,8 +1,10 @@
 import sys
 
-R1=sys.argv[1]
-R2=sys.argv[2]
-name=sys.argv[3]
+R1	=sys.argv[1]
+R2	=sys.argv[2]
+name	=sys.argv[3]
+
+
 f=open(name+".sh",'w')
 print >>f, """#! /bin/bash -l
 
@@ -14,6 +16,7 @@ print >>f, """#! /bin/bash -l
 #SBATCH -o osthyvel_"""+ name + """.out
 #SBATCH --mail-user maya.brandi@scilifelab.se
 #SBATCH --mail-type=ALL
+#SBATCH --qos=seqver
 
 python /bubo/home/h24/mayabr/glob/scilifelab/utilities/bin_reads_by_quality.py""" + " " + R1 + " " + R2
 
